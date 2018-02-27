@@ -7,6 +7,13 @@ h1 {
 	margin: 1%;
 }
 
+h2 {
+	font-size: 20px;
+	margin-top: 1%;
+	margin-bottom: 5%;
+	font-weight: bold;
+}
+
 section {
 	text-align: center;
 }
@@ -17,11 +24,23 @@ section {
 
 button.button {
 	display: block;
-	font-size: 30px;
+	font-size: 20px;
 	margin: 0 auto;
+	margin-top: 1%;
 	width: 150px;
 	height: 50px;
 	border-color: black;
+	background: lightgreen;
+}
+
+button.button:hover {
+	border-color: green;
+	color: green;
+}
+
+button.button:active {
+	border-color: lightgreen;
+	color: white;
 	background: lightgreen;
 }
 
@@ -33,11 +52,25 @@ section#hide {
 	-webkit-transition: opacity .25s ease-in-out;
 }
 
-.container {
-  clear: both;
-  background: white;
-  display: block;
-  float: left;
-  width: 100%;
-  padding: 8px;
+.sidebar {
+	visibility: hidden;
+	width: 265px;
+	height: auto;
+	margin-right: 1%;
+	padding: 1%;
+	float: right;
+	background: lightgreen;
+}
+
+li {
+	margin-top: 2px;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
+	margin-top: 1%;
+	width: 150px;
+	height: 30px;
+	border-color: green;
 }

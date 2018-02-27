@@ -11,16 +11,21 @@
 		<link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
 	</head>
-	<body onload="showSection()">
+	<body onload="showSection(), get_repos()">
 		<script type="text/javascript" src="script.js"></script>
-		<div class="container">
-			<section id="hide">
+		<div> 
+			<section id="hide" >
 				<h1 id="title">Hello world!!!!</h1>
 				<p id="joke"></p>
 			</section>
 			<button class="button" onclick="joke_response()">
 				Joke
 			</button>
+			<input type="text" id="repofilter" oninput="repos_filter()">
+			<aside class="sidebar">
+				<h2>Repositories</h2>
+				<ul id="displaylist"></ul>
+			</aside>
 		</div>
 	</body>
 </HTML>
