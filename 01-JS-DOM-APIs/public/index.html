@@ -11,21 +11,26 @@
 		<link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
 	</head>
-	<body onload="showSection(), get_repos()">
+	<body onload="showSection(), get_repos(), display_matrix()">
 		<script type="text/javascript" src="script.js"></script>
-		<div> 
-			<section id="hide" >
-				<h1 id="title">Hello world!!!!</h1>
-				<p id="joke"></p>
-			</section>
+
+		<header id="hide">
+			<h1 id="title">Hello world!!!!</h1>
+		</header>
+
+		<section class="section">
+			<table id="matrix"></table>
 			<button class="button" onclick="joke_response()">
 				Joke
 			</button>
-			<input type="text" id="repofilter" oninput="repos_filter()">
-			<aside class="sidebar">
-				<h2>Repositories</h2>
-				<ul id="displaylist"></ul>
-			</aside>
-		</div>
+			<p id="joke"></p>
+		</section>
+
+		<aside class="sidebar">
+			<h2>Repositories</h2>
+			<input type="text" id="repofilter" oninput="repos_filter()" placeholder="Search repositories...">
+			<ul id="displaylist"></ul>
+		</aside>
+
 	</body>
 </HTML>

@@ -57,6 +57,8 @@ function show_error() {
 	document.getElementById("title").style.color = "red";
 }
 
+// EXCERCISE 4
+
 let repos_list;
 
 function get_repos() {
@@ -93,9 +95,16 @@ function filter_list(input, list) { //filters the given list by input
 
 function display_list(list) {
 	this.empty_list();
-	for (let i = 0; list.length > i; i++) {
+	if(list.length){
+		for (let i = 0; list.length > i; i++) {
+			let li = document.createElement("LI");
+			let text = document.createTextNode(list[i].owner.login);
+			li.appendChild(text);
+			document.getElementById("displaylist").appendChild(li);
+		}
+	} else {
 		let li = document.createElement("LI");
-		let text = document.createTextNode(list[i].owner.login);
+		let text = document.createTextNode("No repositories found");
 		li.appendChild(text);
 		document.getElementById("displaylist").appendChild(li);
 	}
@@ -104,4 +113,37 @@ function display_list(list) {
 function empty_list() {
 	let list = document.getElementById("displaylist");
 	list.innerHTML = '';
+}
+
+// EXCERCISE 6
+function display_matrix(){
+	let matris = [
+		[ "Lisandro", "Cooper", 1 ],
+		[ "GG", "Allin", 2 ],
+		[ "Seth", "Putnam", 3 ],
+		[ "Martin", "El seductor", 4 ],
+		[ "Discordance", "Axis", 5 ],
+		[ "Local", "Burned", 6 ],
+	];
+	this.forreal_display_matrix(matris);
+}
+
+function forreal_display_matrix(matrix) {
+
+	let table = document.getElementById("matrix");
+	for (let i_row = 0; matrix.length > i_row; i_row++) {
+		//let table_row = document.createElement("TR");
+		let t_row = table.insertRow(i_row);
+
+		for (let i_column = 0; matrix[i_row].length > i_column; i_column++) {
+			//let table_data = document.createElement("TD");
+			//let column_data = document.createTextNode(matrix[row][column]);
+			//table_data.appendChild(column_data);
+
+			//table_row.appendChild(table_data);
+
+			let cell = t_row.insertCell(i_column);
+			cell.innerHTML = matrix[i_row][i_column];
+		}
+	}
 }
