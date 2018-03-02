@@ -9,10 +9,10 @@
     "babel-preset-es2015": "^6.24.1"
   },
   "scripts": {
-    "build": "babel src -d dist"
+    "build": "babel scripts -d dist"
   },
   "scripts": {
-    "build": "babel --presets es2015 src -d dist"
+    "build": "babel --presets es2015 scripts -d dist"
   },
   "author": "yo",
   "license": "ISC"
